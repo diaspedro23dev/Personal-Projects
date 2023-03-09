@@ -1,0 +1,4 @@
+Classe A: Front
+Classe B: Back
+
+A intenção da classe Backend é procurar a pasta Downloads e procurar pelos arquivos que têm o prefixo "favoritos" de exportação do Chrome. Depois de copiado o conteúdo, cada arquivo será processado para 

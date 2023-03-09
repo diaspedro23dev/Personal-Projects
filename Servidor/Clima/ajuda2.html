@@ -1,0 +1,61 @@
+previsao:
+sopa.find('p', class_='-gray -line-height-24 _center').contents
+<p class="-gray -line-height-24 _center">
+    <span class="-bold">Hoje será</span>
+    <span class="-bold ">parecido com ontem</span>
+    <span class="tooltip" data-text="Considerando a temperatura máxima do dia, a diferença é de +1º">
+        <span class="common-sprite sprite-infos _inline-block"></span>
+    </span><br>
+    Dia de sol, com nevoeiro ao amanhecer.
+    As nuvens aumentam no decorrer da tarde.
+</p>
+
+temp min / temp max:
+sopa.find('li', class_='item')
+<li class="item">
+    <span class="variable -bold -gray">Temperatura</span>
+    <div class="_flex">
+        <span class="arrow -down _margin-r-10"></span>
+        <span class="_margin-r-20" id="min-temp-1">12°</span>
+        <span class="arrow -up _margin-r-10"></span>
+        <span id="max-temp-1">24°</span>
+    </div>
+</li>
+
+chuva % / chuva mm:
+<li class="item">
+    <span class="variable -bold -gray">Chuva</span>
+    <div class="_flex _align-center">
+        <span class="_margin-l-5">0mm - 0%</span>
+    </div>
+</li>
+
+
+vento:
+<li class="item">
+    <span class="variable -bold -gray">Vento</span>
+    <div class="_flex">
+        <span class="arrow _margin-r-10" style="transform: rotate(202.5deg);"></span> NNE - 8km/h
+    </div>
+</li>
+
+umidade:
+<li class="item">
+    <span class="variable -bold -gray">Umidade</span>
+    <div class="_flex">
+        <span class="arrow -down _margin-r-10"></span>
+        <span class="_margin-r-20">34%</span>
+        <span class="arrow -up _margin-r-10"></span>
+        <span>93%</span>
+    </div>
+</li>
+
+Sol:
+<li class="item">
+    <span class="variable -bold -gray">Sol</span>
+    <span>
+        06:50h
+        <span class="_margin-l-5 _margin-r-5 _inline-block common-sprite sprite-sunshine-sunrise"></span>
+        17:55h
+    </span>
+</li>

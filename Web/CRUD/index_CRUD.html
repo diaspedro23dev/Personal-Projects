@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <title>Tabela de tarefas</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Testes com Cypress">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.104.2">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link href="styles/style.css" rel="stylesheet">
+</head>
+
+<body class="bg-secondary">
+
+    <div class="container apresentação">
+        <h1 class="h1">Apresentação</h1>
+    </div>
+
+    <div class="container-fluid p-3">
+        <div class="row">
+            <div class="col-12">
+                <div class="card bg-dark mt-3 mb-4">
+                    <div class="card-header border-0 bg-white p-3">
+                        <h5 class="h5">Tarefas Ativas</h5>
+                    </div>
+                    <div class="card-body text-white p-1">
+                        <div class="table-responsive">
+                            <table id="tabelaTarefas" class="table table-borderless table-striped text-center mb-0">
+                                <thead class="border-bottom border-secondary text-white">
+                                    <tr>
+                                        <th class="h5">#</th>
+                                        <th class="h5">Tarefa</th>
+                                        <th class="h5">Local</th>
+                                        <th class="h5">Data/Hora</th>
+                                        <th class="h5">Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="corpoTabela" class="text-white">
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Lavar o banheiro</td>
+                                        <td>Casa</td>
+                                        <td>Todo sábado</td>
+                                        <td>
+                                            <div class="d-flex justify-content-around">
+                                                <p><span
+                                                        class="badge badge-secondary statusLinha5 bg-success">Ativada</span>
+                                                </p>
+                                                <div class="btn-group">
+                                                    <button type="button"
+                                                        class="btn btn-sm btn-secondary dropdown-toggle"
+                                                        data-toggle="dropdown" aria-haspopup="true"
+                                                        aria-expanded="false">Ações</button>
+                                                    <div class="dropdown-menu dropdown-menu-right">
+                                                        <button class="dropdown-item btn btn-sm border-success Ativar"
+                                                            type="button" alt="Ativar" title="Ativar" id="lineActivate1"
+                                                            name="lineActivate1">
+                                                            <img alt="Ativar"
+                                                                src="https://img.icons8.com/color/25/null/toggle-on--v1.png" />
+                                                            <span class="text-center">Ativar</span>
+                                                        </button>
+                                                        <button class="dropdown-item btn btn-sm border-warning Editar"
+                                                            type="button" alt="Editar" title="Editar" id="lineEdit1"
+                                                            name="lineEdit1">
+                                                            <img alt="Editar"
+                                                                src="https://img.icons8.com/fluency/25/null/edit.png" />
+                                                            <span class="text-center">Editar</span>
+                                                        </button>
+                                                        <button class="dropdown-item btn btn-sm border-danger Desativar"
+                                                            type="button" alt="Desativar" title="Desativar"
+                                                            id="lineDeactivate1" name="lineDeactivate1">
+                                                            <img alt="Desativar"
+                                                                src="https://img.icons8.com/color/25/null/toggle-off.png" />
+                                                            <span class="text-center">Desativar</span>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>Lavar as roupas</td>
+                                        <td>Lavanderia</td>
+                                        <td>Toda sexta-feira</td>
+                                        <td>
+                                            <div class="d-flex justify-content-around">
+                                                <p><span
+                                                        class="badge badge-secondary statusLinha5 bg-success">Ativada</span>
+                                                </p>
+                                                <div class="btn-group">
+                                                    <button type="button"
+                                                        class="btn btn-sm btn-secondary dropdown-toggle"
+                                                        data-toggle="dropdown" aria-haspopup="true"
+                                                        aria-expanded="false">Ações</button>
+                                                    <div class="dropdown-menu dropdown-menu-right">
+                                                        <button class="dropdown-item btn btn-sm border-success Ativar"
+                                                            type="button" alt="Ativar" title="Ativar" id="lineActivate2"
+                                                            name="lineActivate2">
+                                                            <img alt="Ativar"
+                                                                src="https://img.icons8.com/color/25/null/toggle-on--v1.png" />
+                                                            <span class="text-center">Ativar</span>
+                                                        </button>
+                                                        <button class="dropdown-item btn btn-sm border-warning Editar"
+                                                            type="button" alt="Editar" title="Editar" id="lineEdit2"
+                                                            name="lineEdit2">
+                                                            <img alt="Editar"
+                                                                src="https://img.icons8.com/fluency/25/null/edit.png" />
+                                                            <span class="text-center">Editar</span>
+                                                        </button>
+                                                        <button class="dropdown-item btn btn-sm border-danger Desativar"
+                                                            type="button" alt="Desativar" title="Desativar"
+                                                            id="lineDeactivate2" name="lineDeactivate2">
+                                                            <img alt="Desativar"
+                                                                src="https://img.icons8.com/color/25/null/toggle-off.png" />
+                                                            <span class="text-center">Desativar</span>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>Fazer comida</td>
+                                        <td>Cozinha</td>
+                                        <td>Toda segunda-feira</td>
+                                        <td>
+                                            <div class="d-flex justify-content-around">
+                                                <p><span
+                                                        class="badge badge-secondary statusLinha5 bg-success">Ativada</span>
+                                                </p>
+                                                <div class="btn-group">
+                                                    <button type="button"
+                                                        class="btn btn-sm btn-secondary dropdown-toggle"
+                                                        data-toggle="dropdown" aria-haspopup="true"
+                                                        aria-expanded="false">Ações</button>
+                                                    <div class="dropdown-menu dropdown-menu-right">
+                                                        <button class="dropdown-item btn btn-sm border-success Ativar"
+                                                            type="button" alt="Ativar" title="Ativar" id="lineActivate3"
+                                                            name="lineActivate3">
+                                                            <img alt="Ativar"
+                                                                src="https://img.icons8.com/color/25/null/toggle-on--v1.png" />
+                                                            <span class="text-center">Ativar</span>
+                                                        </button>
+                                                        <button class="dropdown-item btn btn-sm border-warning Editar"
+                                                            type="button" alt="Editar" title="Editar" id="lineEdit3"
+                                                            name="lineEdit3">
+                                                            <img alt="Editar"
+                                                                src="https://img.icons8.com/fluency/25/null/edit.png" />
+                                                            <span class="text-center">Editar</span>
+                                                        </button>
+                                                        <button class="dropdown-item btn btn-sm border-danger Desativar"
+                                                            type="button" alt="Desativar" title="Desativar"
+                                                            id="lineDeactivate3" name="lineDeactivate3">
+                                                            <img alt="Desativar"
+                                                                src="https://img.icons8.com/color/25/null/toggle-off.png" />
+                                                            <span class="text-center">Desativar</span>
+                                                        </button>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>Estudar Programação</td>
+                                        <td>Udemy</td>
+                                        <td>Todo domingo</td>
+                                        <td>
+                                            <div class="d-flex justify-content-around">
+                                                <p><span
+                                                        class="badge badge-secondary statusLinha5 bg-success">Ativada</span>
+                                                </p>
+                                                <div class="btn-group">
+                                                    <button type="button"
+                                                        class="btn btn-sm btn-sm btn-secondary dropdown-toggle"
+                                                        data-toggle="dropdown" aria-haspopup="true"
+                                                        aria-expanded="false">Ações</button>
+                                                    <div class="dropdown-menu dropdown-menu-right">
+                                                        <button class="dropdown-item btn btn-sm border-success Ativar"
+                                                            type="button" alt="Ativar" title="Ativar" id="lineActivate4"
+                                                            name="lineActivate4">
+                                                            <img alt="Ativar"
+                                                                src="https://img.icons8.com/color/25/null/toggle-on--v1.png" />
+                                                            <span class="text-center">Ativar</span>
+                                                        </button>
+                                                        <button class="dropdown-item btn btn-sm border-warning Editar"
+                                                            type="button" alt="Editar" title="Editar" id="lineEdit4"
+                                                            name="lineEdit4">
+                                                            <img alt="Editar"
+                                                                src="https://img.icons8.com/fluency/25/null/edit.png" />
+                                                            <span class="text-center">Editar</span>
+                                                        </button>
+                                                        <button class="dropdown-item btn btn-sm border-danger Desativar"
+                                                            type="button" alt="Desativar" title="Desativar"
+                                                            id="lineDeactivate4" name="lineDeactivate4">
+                                                            <img alt="Desativar"
+                                                                src="https://img.icons8.com/color/25/null/toggle-off.png" />
+                                                            <span class="text-center">Desativar</span>
+                                                        </button>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td>Postar conteúdo nas redes</td>
+                                        <td>Internet</td>
+                                        <td>Todo sábado</td>
+                                        <td>
+                                            <div class="d-flex justify-content-around">
+                                                <p><span
+                                                        class="badge badge-secondary statusLinha5 bg-success">Ativada</span>
+                                                </p>
+                                                <div class="btn-group">
+                                                    <button type="button"
+                                                        class="btn btn-sm btn-secondary dropdown-toggle"
+                                                        data-toggle="dropdown" aria-haspopup="true"
+                                                        aria-expanded="false">
+                                                        Ações
+                                                    </button>
+                                                    <div class="dropdown-menu dropdown-menu-right">
+                                                        <button class="dropdown-item btn btn-sm border-success Ativar"
+                                                            type="button" alt="Ativar" title="Ativar" id="lineActivate5"
+                                                            name="lineActivate5">
+                                                            <img alt="Ativar"
+                                                                src="https://img.icons8.com/color/25/null/toggle-on--v1.png" />
+                                                            <span class="text-center">Ativar</span>
+                                                        </button>
+                                                        <button class="dropdown-item btn btn-sm border-warning Editar"
+                                                            type="button" alt="Editar" title="Editar" id="lineEdit5"
+                                                            name="lineEdit5">
+                                                            <img alt="Editar"
+                                                                src="https://img.icons8.com/fluency/25/null/edit.png" />
+                                                            <span class="text-center">Editar</span>
+                                                        </button>
+                                                        <button class="dropdown-item btn btn-sm border-danger Desativar"
+                                                            type="button" alt="Desativar" title="Desativar"
+                                                            id="lineDeactivate5" name="lineDeactivate5">
+                                                            <img alt="Desativar"
+                                                                src="https://img.icons8.com/color/25/null/toggle-off.png" />
+                                                            <span class="text-center">Desativar</span>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="d-flex justify-content-evenly">
+                                    <div class="input-group flex-wrap mx-3">
+                                        <input type="text" class="form-control" placeholder="Nova tarefa..."
+                                            aria-label="new-task" id="new-task" aria-describedby="addon-task">
+                                    </div>
+                                    <div class="input-group flex-wrap mx-3">
+                                        <input type="text" class="form-control" placeholder="Local"
+                                            aria-label="new-local" id="new-local" aria-describedby="addon-local">
+                                    </div>
+                                    <div class="input-group flex-wrap mx-3">
+                                        <input type="datetime-local" class="form-control" disabled
+                                            value="1995-07-31T12:45" aria-label="new-datetime" id="new-datetime"
+                                            aria-describedby="addon-datetime">
+                                    </div>
+                                    <button id="criarLinha" name="criarLinha" type="button" class="btn bg-light mx-3">
+                                        <img alt="Criar Linha" title="Criar Linha"
+                                            src="https://img.icons8.com/ios/25/null/add--v1.png" />
+                                    </button>
+                                    <button id="limparLinha" name="limparLinha" type="button" class="btn bg-light mx-3">
+                                        <img alt="Apagar Linha" title="Apagar Linha"
+                                            src="https://img.icons8.com/fluency/25/null/eraser-tool.png" />
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!--
+    <div class="row">
+        <div class="col-12">
+            <div class="card mb-4">
+                <div class="card-header pb-0">
+                    <h6>Desativados</h6>
+                </div>
+                <div class="card-body px-0 pt-0 pb-2">
+                    <div class="table-responsive p-0">
+                        <table class="table align-items-center justify-content-center mb-0">
+                            <thead>
+                                <tr>
+                                    <th class="">Project</th>
+                                    <th class="">Budget</th>
+                                    <th class="">Status</th>
+                                    <th class="">Completion</th>
+                                    <th>???</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="d-flex px-2">
+                                            <div class="my-auto">
+                                                <h6 class="mb-0 ">Spotify</h6>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <p class=" font-weight-bold mb-0">$2,500</p>
+                                    </td>
+                                    <td>
+                                        <span class="">working</span>
+                                    </td>
+                                    <td class="align-middle text-center">
+                                        <div class="d-flex align-items-center justify-content-center">
+                                            <span class="me-2 ">60%</span>
+                                            <div>
+                                                <div class="progress">
+                                                    <div class="progress-bar bg-gradient-info" role="progressbar"
+                                                        aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
+                                                        style="width: 60%;"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="align-middle">
+                                        <button class="btn btn-link mb-0">
+                                            <i class="fa fa-ellipsis-v text-xs" aria-hidden="true"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="d-flex px-2">
+                                            <div class="my-auto">
+                                                <h6 class="mb-0 ">Invision</h6>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <p class=" font-weight-bold mb-0">$5,000</p>
+                                    </td>
+                                    <td>
+                                        <span class="">done</span>
+                                    </td>
+                                    <td class="align-middle text-center">
+                                        <div class="d-flex align-items-center justify-content-center">
+                                            <span class="me-2 ">100%</span>
+                                            <div>
+                                                <div class="progress">
+                                                    <div class="progress-bar bg-gradient-success" role="progressbar"
+                                                        aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"
+                                                        style="width: 100%;"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="align-middle">
+                                        <button class="btn btn-link mb-0" aria-haspopup="true" aria-expanded="false">
+                                            <i class="fa fa-ellipsis-v text-xs" aria-hidden="true"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="d-flex px-2">
+                                            <div class="my-auto">
+                                                <h6 class="mb-0 ">Jira</h6>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <p class=" font-weight-bold mb-0">$3,400</p>
+                                    </td>
+                                    <td>
+                                        <span class="">canceled</span>
+                                    </td>
+                                    <td class="align-middle text-center">
+                                        <div class="d-flex align-items-center justify-content-center">
+                                            <span class="me-2 ">30%</span>
+                                            <div>
+                                                <div class="progress">
+                                                    <div class="progress-bar bg-gradient-danger" role="progressbar"
+                                                        aria-valuenow="30" aria-valuemin="0" aria-valuemax="30"
+                                                        style="width: 30%;"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="align-middle">
+                                        <button class="btn btn-link mb-0" aria-haspopup="true" aria-expanded="false">
+                                            <i class="fa fa-ellipsis-v text-xs" aria-hidden="true"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="d-flex px-2">
+                                            <div class="my-auto">
+                                                <h6 class="mb-0 ">Slack</h6>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <p class=" font-weight-bold mb-0">$1,000</p>
+                                    </td>
+                                    <td>
+                                        <span class="">canceled</span>
+                                    </td>
+                                    <td class="align-middle text-center">
+                                        <div class="d-flex align-items-center justify-content-center">
+                                            <span class="me-2 ">0%</span>
+                                            <div>
+                                                <div class="progress">
+                                                    <div class="progress-bar bg-gradient-success" role="progressbar"
+                                                        aria-valuenow="0" aria-valuemin="0" aria-valuemax="0"
+                                                        style="width: 0%;"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="align-middle">
+                                        <button class="btn btn-linkmb-0" aria-haspopup="true" aria-expanded="false">
+                                            <i class="fa fa-ellipsis-v text-xs" aria-hidden="true"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="d-flex px-2">
+                                            <div class="my-auto">
+                                                <h6 class="mb-0 ">Webdev</h6>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <p class=" font-weight-bold mb-0">$14,000</p>
+                                    </td>
+                                    <td>
+                                        <span class="">working</span>
+                                    </td>
+                                    <td class="align-middle text-center">
+                                        <div class="d-flex align-items-center justify-content-center">
+                                            <span class="me-2 ">80%</span>
+                                            <div>
+                                                <div class="progress">
+                                                    <div class="progress-bar bg-gradient-info" role="progressbar"
+                                                        aria-valuenow="80" aria-valuemin="0" aria-valuemax="80"
+                                                        style="width: 80%;"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="align-middle">
+                                        <button class="btn btn-linkmb-0" aria-haspopup="true" aria-expanded="false">
+                                            <i class="fa fa-ellipsis-v text-xs" aria-hidden="true"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="d-flex px-2">
+                                            <div class="my-auto">
+                                                <h6 class="mb-0 ">Adobe XD</h6>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <p class=" font-weight-bold mb-0">$2,300</p>
+                                    </td>
+                                    <td>
+                                        <span class="">done</span>
+                                    </td>
+                                    <td class="align-middle text-center">
+                                        <div class="d-flex align-items-center justify-content-center">
+                                            <span class="me-2 ">100%</span>
+                                            <div>
+                                                <div class="progress">
+                                                    <div class="progress-bar bg-gradient-success" role="progressbar"
+                                                        aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"
+                                                        style="width: 100%;"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="align-middle">
+                                        <button class="btn btn-linkmb-0" aria-haspopup="true" aria-expanded="false">
+                                            <i class="fa fa-ellipsis-v text-xs" aria-hidden="true"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    <div class="container">
+        <button id="novaFuncao" class="btn btn-dark text-white">Funcao</button>
+        <p class="lead">Retorno JQuery: <span class="retorno">???</span></p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+        crossorigin="anonymous"></script>
+    <script src="scripts/script.js"></script>
+</body>
+
+</html>

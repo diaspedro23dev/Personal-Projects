@@ -1,0 +1,10 @@
+* {
+    font-family: "Lucida Console", Courier, monospace;
+    margin: 0px;
+    padding: 0px;
+}
+
+.fundo {
+    background-image: linear-gradient(90deg, #ff0000, orange, #ffff00, #00ff00, #0000ff, indigo, violet);
+    
+}
