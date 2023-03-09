@@ -1,0 +1,17 @@
+1 horas = 15 graus
+1 minuto = 60 graus
+1 segundo = 60 graus
+
+00:00 hora = (01 * pi / 2) = 90 graus
+01:00 hora = (01 * pi / 3) = 60 graus
+02:00 hora = (01 * pi / 6) = 30 graus
+03:00 hora = (02 * pi / 1) = 360 graus
+04:00 hora = (11 * pi / 6) = 330 graus
+05:00 hora = (05 * pi / 3) = 300 graus
+06:00 hora = (03 * pi / 2) = 270 graus
+07:00 hora = (04 * pi / 3) = 240 graus
+08:00 hora = (07 * pi / 6) = 210 graus
+09:00 hora = (01 * pi / 1) = 180 graus
+10:00 hora = (05 * pi / 6) = 150 graus
+11:00 hora = (02 * pi / 3) = 120 graus
+12:00 hora = (01 * pi / 2) = 90 graus

@@ -1,0 +1,146 @@
+/* Restoring browser effects */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* All of the same styling to the body */
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(90deg, rgb(126, 126, 126), rgb(54, 66, 61));
+}
+
+/* Sizing, positioning of main dial of the clock */
+.relogio {
+    display: table;
+    position: relative;
+    margin: auto;
+    background-image: linear-gradient(45deg, rgb(54, 54, 54), rgb(126, 126, 126));
+    border: 5px solid red;
+    border-radius: 50%;
+    box-shadow: 0 0em 10em #05d485;
+    width: 500px;
+    height: 500px;
+}
+
+/* Different length of different hands of clock */
+.hr, .min, .sec {
+    width: 3px;
+    transform: translate(-50%, -100%);
+    transform-origin: top;
+    z-index: 1;
+    border-radius: 1em;
+    rotate: 0deg;
+}
+
+.hr {
+    height: 50%;
+    background-color: #ff0000;
+    rotate: 45deg;
+    translate: 50% 100%;
+}
+
+.min {
+    height: 50%;
+    background-color: #00ff00;
+    rotate: 45deg;
+    translate: 50% 100%;
+}
+
+.sec {
+    height: 50%;
+    background-color: #0000ff;
+    rotate: 45deg;
+    translate: 50% 100%;
+}
+
+.pin {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    width: 15px;
+    height: 15px;
+    background: #0bec70;
+    border: 3px solid #cd5ddb;
+    border-radius: 1em;
+    margin: auto;
+    z-index: 3;
+}
+
+.centro {
+    position: absolute;
+    margin: 0 auto;
+    padding: 0px;
+    border-radius: 0%;
+    background-color: yellow;
+    top: 245px;
+    left: 0px;
+    height: 10px;
+    rotate: 180deg;
+    width: 50%;
+    translate: 50% 50%;
+}
+
+.numero {
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.n1 {
+    rotate: 30deg;
+}
+
+.n2 {
+    rotate: 60deg;
+}
+
+.n3 {
+    rotate: 90deg;
+}
+
+.n4 {
+    rotate: 120deg;
+}
+
+.n5 {
+    rotate: 150deg;
+}
+
+.n6 {
+    rotate: 180deg;
+}
+
+.n7 {
+    rotate: 210deg;
+}
+
+.n8 {
+    rotate: 240deg;
+}
+
+.n9 {
+    rotate: 270deg;
+}
+
+.n10 {
+    rotate: 300deg;
+}
+
+.n11 {
+    rotate: 330deg;
+}
+
+.n12 {
+    rotate: 360deg;
+}
